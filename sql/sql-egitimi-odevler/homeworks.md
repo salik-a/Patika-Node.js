@@ -242,3 +242,222 @@ GROUP BY country_id
 ORDER BY COUNT(*) DESC
 LIMIT 1;
 ```
+
+
+<br/>
+
+# ÖDEV 8
+<br/>
+
+# 1
+> **test** veritabanınızda **employee** isimli sütun bilgileri id(INTEGER), name VARCHAR(50), birthday DATE, email VARCHAR(100) olan bir tablo oluşturalım.
+```SQL
+SELECT rating FROM film
+
+```
+
+# 2
+>Oluşturduğumuz **employee** tablosuna **'Mockaroo'** servisini kullanarak 50 adet veri ekleyelim.
+<details>
+<summary>INSERT Queries</summary>
+<br>
+<pre>
+insert into employee (id, name, birthday, email) values (1, 'Zerk', '2019-02-15', 'zphetteplace0@hostgator.com');
+insert into employee (id, name, birthday, email) values (2, 'Kathryn', '1986-12-02', 'kdowdall1@jigsy.com');
+insert into employee (id, name, birthday, email) values (3, 'Alasteir', '1991-01-14', 'abrodway2@rambler.ru');
+insert into employee (id, name, birthday, email) values (4, 'Umeko', '2006-01-02', 'ujewess3@usnews.com');
+insert into employee (id, name, birthday, email) values (5, 'Rosie', '1954-12-31', 'rcutts4@wix.com');
+insert into employee (id, name, birthday, email) values (6, 'Marne', '1977-10-28', 'mgainsburgh5@joomla.org');
+insert into employee (id, name, birthday, email) values (7, 'Stevie', '2016-05-01', 'sbullas6@latimes.com');
+insert into employee (id, name, birthday, email) values (8, 'Nev', '1951-09-17', 'nlangelay7@wired.com');
+insert into employee (id, name, birthday, email) values (9, 'Cart', '1992-04-09', 'chofton8@who.int');
+insert into employee (id, name, birthday, email) values (10, 'Christan', '2007-12-31', 'creinbech9@g.co');
+insert into employee (id, name, birthday, email) values (11, 'Kizzie', '2019-07-30', 'kdurranta@smugmug.com');
+insert into employee (id, name, birthday, email) values (12, 'Netta', '1955-07-23', 'nmellandb@diigo.com');
+insert into employee (id, name, birthday, email) values (13, 'Cris', '1983-10-24', 'csimesterc@hostgator.com');
+insert into employee (id, name, birthday, email) values (14, 'Melosa', '1980-10-31', 'mbatecokd@people.com.cn');
+insert into employee (id, name, birthday, email) values (15, 'Glenden', '1975-06-08', 'garmfielde@google.fr');
+insert into employee (id, name, birthday, email) values (16, 'Emmy', '1967-11-12', 'eskinnerf@nsw.gov.au');
+insert into employee (id, name, birthday, email) values (17, 'Whit', '1989-01-08', 'wgarredg@cisco.com');
+insert into employee (id, name, birthday, email) values (18, 'Izak', '1979-05-20', 'iramelh@mlb.com');
+insert into employee (id, name, birthday, email) values (19, 'Isobel', '1951-08-22', 'istychei@google.nl');
+insert into employee (id, name, birthday, email) values (20, 'Benetta', '2011-08-01', 'bdendlej@pcworld.com');
+insert into employee (id, name, birthday, email) values (21, 'Kora', '1954-04-18', 'keakleek@elegantthemes.com');
+insert into employee (id, name, birthday, email) values (22, 'Rees', '1981-09-14', 'ryurlovl@nifty.com');
+insert into employee (id, name, birthday, email) values (23, 'Lezlie', '1958-06-26', 'linggallm@hhs.gov');
+insert into employee (id, name, birthday, email) values (24, 'Gaynor', null, 'ggotteliern@fc2.com');
+insert into employee (id, name, birthday, email) values (25, 'Donetta', '2020-01-17', 'dgioanio@nyu.edu');
+insert into employee (id, name, birthday, email) values (26, 'Shayla', '1958-03-09', 'spenneyp@pinterest.com');
+insert into employee (id, name, birthday, email) values (27, 'Minnnie', '1988-12-03', 'mwannellq@taobao.com');
+insert into employee (id, name, birthday, email) values (28, 'Andras', '1976-02-26', 'amatejr@slashdot.org');
+insert into employee (id, name, birthday, email) values (29, 'Hodge', '2016-09-18', 'hgibletts@netlog.com');
+insert into employee (id, name, birthday, email) values (30, 'Poppy', '1989-07-12', 'pwarrilowt@mapy.cz');
+insert into employee (id, name, birthday, email) values (31, 'Elwood', '1980-11-24', 'ekilgallonu@sciencedaily.com');
+insert into employee (id, name, birthday, email) values (32, 'Rosalinde', '1983-10-30', 'rwildev@instagram.com');
+insert into employee (id, name, birthday, email) values (33, 'Shawna', '1976-02-20', 'spoatw@1688.com');
+insert into employee (id, name, birthday, email) values (34, 'Dag', '1958-08-06', 'dcollisonx@de.vu');
+insert into employee (id, name, birthday, email) values (35, 'Farrel', null, 'fblewy@acquirethisname.com');
+insert into employee (id, name, birthday, email) values (36, 'Colleen', '2007-11-11', 'cpontinz@rakuten.co.jp');
+insert into employee (id, name, birthday, email) values (37, 'Mitchael', null, 'mburston10@newsvine.com');
+insert into employee (id, name, birthday, email) values (38, 'Karissa', '1955-12-28', 'kpeeter11@tinypic.com');
+insert into employee (id, name, birthday, email) values (39, 'Sholom', '2000-10-06', 'svanetti12@last.fm');
+insert into employee (id, name, birthday, email) values (40, 'Kaleena', '1954-08-11', 'kcorbyn13@webnode.com');
+insert into employee (id, name, birthday, email) values (41, 'Brendin', '1978-02-14', 'brixon14@delicious.com');
+insert into employee (id, name, birthday, email) values (42, 'Gunther', '2009-12-14', 'ggronaver15@goodreads.com');
+insert into employee (id, name, birthday, email) values (43, 'Sammy', '1952-09-26', 'sprantl16@amazon.co.uk');
+insert into employee (id, name, birthday, email) values (44, 'Inness', '1958-04-16', 'imcvanamy17@squarespace.com');
+insert into employee (id, name, birthday, email) values (45, 'Chester', '1999-03-22', 'cpruce18@toplist.cz');
+insert into employee (id, name, birthday, email) values (46, 'Gun', '2002-01-14', 'ggalle19@qq.com');
+insert into employee (id, name, birthday, email) values (47, 'Addie', '1958-06-27', 'abache1a@edublogs.org');
+insert into employee (id, name, birthday, email) values (48, 'Eddie', '1994-10-31', 'ehailes1b@cnn.com');
+insert into employee (id, name, birthday, email) values (49, 'Burnard', '2008-03-14', 'bluna1c@soup.io');
+insert into employee (id, name, birthday, email) values (50, 'Desirae', '1996-07-06', 'dallgood1d@yellowpages.com');
+</pre>
+</details>
+
+# 3
+> Sütunların her birine göre diğer sütunları güncelleyecek 5 adet **UPDATE** işlemi yapalım.
+```SQL
+UPDATE employee
+SET email = 'doroteya@ed.gov'
+WHERE id = 5;
+
+UPDATE employee
+SET email = 'umeko@gmail.com'
+WHERE name = 'Umeko';
+
+UPDATE employee
+SET birthday = '1991-01-14'
+WHERE name = 'Nev';
+
+UPDATE employee
+SET name = 'alper',
+	email = 'alper@mail.com',
+	birthday = '1980-05-15'
+WHERE id = 9;
+
+UPDATE employee
+SET email = 'n@gmail.com'
+WHERE name = 'N__';
+```
+
+# 4
+> Sütunların her birine göre ilgili satırı silecek 5 adet **DELETE** işlemi yapalım.
+```SQL
+DELETE FROM employee
+WHERE id = 5;
+
+DELETE FROM employee
+WHERE name = 'Umeko';
+
+DELETE FROM employee
+WHERE email IS NULL;
+
+DELETE FROM employee
+WHERE email ILIKE '%a';
+
+DELETE FROM employee
+WHERE name = 'N__';
+
+```
+
+<br/>
+
+# ÖDEV 9
+<br/>
+
+# 1
+> **city** tablosu ile **country** tablosunda bulunan şehir (city) ve ülke (country) isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
+```SQL
+SELECT city,country FROM city
+INNER JOIN country ON city.country_id=country.country_id;
+```
+
+# 2
+> **customer** tablosu ile **payment** tablosunda bulunan payment_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
+```SQL
+SELECT payment_id, first_name,last_name FROM customer
+INNER JOIN payment ON customer.customer_id=payment.payment_id;
+```
+
+# 3
+> **customer** tablosu ile **rental** tablosunda bulunan rental_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
+```SQL
+SELECT rental_id, first_name,last_name FROM customer
+INNER JOIN rental ON customer.customer_id=rental.rental_id;
+```
+
+<br/>
+
+# ÖDEV 10
+<br/>
+
+# 1
+> **city** tablosu ile **country** tablosunda bulunan şehir (city) ve ülke (country) isimlerini birlikte görebileceğimiz LEFT JOIN sorgusunu yazınız.
+```SQL
+SELECT city,country FROM city
+LEFT JOIN country ON city.country_id=country.country_id;
+```
+
+# 2
+> **customer** tablosu ile **payment** tablosunda bulunan payment_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz RIGHT JOIN sorgusunu yazınız.
+```SQL
+SELECT payment_id, first_name,last_name FROM customer
+RIGHT JOIN payment ON customer.customer_id=payment.payment_id;
+```
+
+# 3
+> **customer** tablosu ile **rental** tablosunda bulunan rental_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz FULL JOIN sorgusunu yazınız.
+```SQL
+SELECT rental_id, first_name,last_name FROM customer
+FULL JOIN rental ON customer.customer_id=rental.rental_id;
+```
+
+<br/>
+
+# ÖDEV 11
+<br/>
+
+# 1
+> **actor** ve **customer** tablolarında bulunan first_name sütunları için tüm verileri sıralayalım.
+```SQL
+(SELECT first_name FROM actor)
+UNION
+(SELECT first_name FROM customer);
+```
+
+# 2
+> **actor** ve **customer** tablolarında bulunan first_name sütunları için kesişen verileri sıralayalım.
+```SQL
+(SELECT first_name FROM actor)
+INTERSECT
+(SELECT first_name FROM customer);
+```
+
+# 3
+> **actor** ve **customer** tablolarında bulunan first_name sütunları için ilk tabloda bulunan ancak ikinci tabloda bulunmayan verileri sıralayalım.
+```SQL
+(SELECT first_name FROM actor)
+EXCEPT
+(SELECT first_name FROM customer);
+```
+
+# 4
+> İlk 3 sorguyu tekrar eden veriler için de yapalım.
+```SQL
+(SELECT first_name FROM actor)
+UNION ALL
+(SELECT first_name FROM customer);
+```
+
+```SQL
+(SELECT first_name FROM actor)
+INTERSECT
+(SELECT first_name FROM customer);
+```
+
+```SQL
+(SELECT first_name FROM actor)
+EXCEPT ALL
+(SELECT first_name FROM customer);
+```
