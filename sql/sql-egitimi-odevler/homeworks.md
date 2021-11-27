@@ -461,3 +461,88 @@ INTERSECT
 EXCEPT ALL
 (SELECT first_name FROM customer);
 ```
+
+<br/>
+
+# ÖDEV 12
+<br/>
+
+# 1
+> **film** tablosunda film uzunluğu **length** sütununda gösterilmektedir. Uzunluğu ortalama film uzunluğundan fazla kaç tane film vardır?
+```SQL
+SELECT COUNT(*) FROM film
+WHERE length > 
+(SELECT ROUND(AVG(length)) FROM film);
+```
+
+# 2
+> **film** tablosunda en yüksek **rental_rate** değerine sahip kaç tane film vardır?
+```SQL
+SELECT * FROM film
+WHERE rental_rate = 
+(SELECT MAX(rental_rate) FROM film);
+```
+
+# 3
+> **film** tablosunda en düşük **rental_rate** ve en düşün **replacement_cost** değerlerine sahip filmleri sıralayınız.
+```SQL
+SELECT * FROM film
+WHERE rental_rate = (SELECT MIN(rental_rate) FROM film) 
+AND replacement_cost = (SELECT MIN(replacement_cost) FROM film);
+```
+
+# 4
+> **payment** tablosunda en fazla sayıda alışveriş yapan müşterileri(customer) sıralayınız.
+```SQL
+SELECT DISTINCT(customer_id) FROM payment 
+WHERE customer_id = ANY 
+( SELECT COUNT(*) FROM payment GROUP BY customer_id );
+```
+<br/>
+
+# RECAP
+<br/>
+
+# 1
+> **film** tablosundan 'K' karakteri ile başlayan en uzun ve replacement_cost u en düşük 4 filmi sıralayınız.
+```SQL
+SELECT title, length, replacement_cost FROM film
+WHERE title LIKE 'K%'
+ORDER BY length DESC, replacement_cost ASC
+LIMIT 4; 
+```
+
+# 2
+> **film** tablosunda içerisinden en fazla sayıda film bulunduran rating kategorisi hangisidir?
+```SQL
+SELECT COUNT(*), rating FROM film
+GROUP BY rating
+ORDER BY COUNT(*) DESC
+LIMIT 1;
+```
+
+# 3
+> **customer** tablosunda en çok alışveriş yapan müşterinin adı nedir?
+```SQL
+SELECT SUM(amount), customer.first_name, customer.last_name FROM payment
+JOIN customer ON customer.customer_id = payment.customer_id
+GROUP BY payment.customer_id, customer.first_name, customer.last_name
+ORDER BY SUM(amount) DESC
+LIMIT 1;
+```
+
+# 4
+> **category** tablosundan kategori isimlerini ve kategori başına düşen film sayılarını sıralayınız.
+```SQL
+SELECT COUNT(*),category.name FROM category
+JOIN film_category ON film_category.category_id = category.category_id
+JOIN film ON film.film_id = film_category.film_id
+GROUP BY category.name;
+```
+
+# 5
+> **film** tablosunda isminde en az 4 adet 'e' veya 'E' karakteri bulunan kç tane film vardır?
+```SQL
+SELECT title FROM film
+WHERE title ILIKE '%e%e%e%e';
+```
